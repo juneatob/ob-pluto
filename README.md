@@ -7,11 +7,16 @@
 - 文章清单：260 篇
 - 正文完整：260 篇
 - 其中由微信短内容页面恢复：48 篇
+- 通过一键同步新增：0 篇
 - 待补抓正文：0 篇
 - 已本地化图片：1523 张
 - 图片下载失败：0 张
 
 > 说明：普通图文和微信短内容使用不同页面结构；本归档已分别提取并统一为 Markdown。详见 [MIGRATION_REPORT.md](MIGRATION_REPORT.md)。
+
+## 一键同步新文章
+
+在 Mac 上复制新文章链接，然后双击仓库中的 `一键同步.command`。程序会读取文章、下载图片、更新清单、校验并推送到 GitHub。详见 [SYNC_GUIDE.md](SYNC_GUIDE.md)。
 
 ## 目录
 
@@ -20,6 +25,7 @@
 - `data/manifest.json`：最终文章清单和微信原文链接
 - `data/source_manifest.json`：迁移前的原始导出清单
 - `data/assets.json`：图片下载与映射记录
+- `tools/`：增量同步与完整性校验脚本
 
 ## 文章索引
 
