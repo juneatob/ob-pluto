@@ -443,6 +443,10 @@ def build_readme(manifest: list[dict], assets: list[dict]) -> str:
         "",
         "本仓库归档微信公众号“百味鸡 OB Pluto”的文章，正文由原始微信文章导出为 Markdown。",
         "",
+        "## Reviewer materials",
+        "",
+        "- [Anonymous Reviewer Supplement](ANONYMOUS_REVIEWER_SUPPLEMENT.md): English catalog covering all 260 records, with concise summaries of the ten focal records.",
+        "",
         "## 归档状态",
         "",
         f"- 文章清单：{len(manifest)} 篇",
@@ -480,7 +484,7 @@ def build_readme(manifest: list[dict], assets: list[dict]) -> str:
     display_items.extend(sorted((item for item in manifest if item["order"] not in incremental_orders), key=lambda item: item["order"]))
     for item in display_items:
         article_path = markdown_link(f"articles/{item['file']}")
-        title = str(item["title"]).replace("|", "\\|").replace("\n", " ")
+        title = str(item["title"]).replace("|", "\\|").replace("\r", " ").replace("\n", " ")
         status = "完整" if not item.get("fetch_error") else "待补抓"
         lines.append(f"| {item['order']} | [{title}]({article_path}) | {status} | [原文]({item['url']}) |")
     lines.extend(["", "## 版权", "", "文章版权归原作者所有。除非作者另行授权，本仓库内容不附加开放内容许可。", ""])
