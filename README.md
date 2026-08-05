@@ -22,6 +22,10 @@
 
 在 Mac 上复制新文章链接，然后双击仓库中的 `一键同步.command`。程序会读取文章、下载图片、更新清单、校验并推送到 GitHub。详见 [SYNC_GUIDE.md](SYNC_GUIDE.md)。
 
+## 一键同步新文章
+
+在 Mac 上复制新文章链接，然后双击仓库中的 `一键同步.command`。程序会读取文章、下载图片、更新清单、校验并推送到 GitHub。详见 [SYNC_GUIDE.md](SYNC_GUIDE.md)。
+
 ## 目录
 
 - `articles/`：文章 Markdown 文件
